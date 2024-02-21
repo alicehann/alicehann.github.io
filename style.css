@@ -1,8 +1,10 @@
-<link rel="stylesheet" href="/style.css" type="text/css">
-<div class="problem">
-Here's the text of the problem, which will now appear in the green box style defined in the style sheet.
+p {
+    text-wrap: pretty;  
+}
+<div class="cat">
+Here's the text of the cat, which will now appear in the green box style defined in the style sheet.
 </div>
-.problem {
+.cat {
     background-color: #86e2b0;
     margin-left: 5%;
     margin-right: 10px;
