@@ -2,13 +2,13 @@ p {
     text-wrap: pretty;  
 }
 h1 {
-  color: blue;
-  background-color: orange;
+  color: pink;
+  background-color: black;
   font-size: xx-large;
 }
 
 .problem {
-    background-color: #86e2b0;
+    background-color: #f7d2e2;
     margin-left: 5%;
     margin-right: 10px;
     margin-bottom: 20px;
