@@ -1,17 +1,5 @@
 <link rel="stylesheet" href="/style.css" type="text/css">
-h1 {
-  color: blue;
-  background-color: orange;
-  font-size: xx-large;
-}
-body {
-  font-family: Verdana, sans-serif;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-p {
-    text-wrap: pretty;  
-}
+
 .problem {
     background-color: #86e2b0;
     margin-left: 5%;
