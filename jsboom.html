@@ -13,7 +13,8 @@
             countobj = document.getElementById("count");
             console.log("Updating object: " + countobj);
             countobj.innerHTML = "<b>" + i + "</b>";
-            document.body.style.backgroundColor = "red";
+            var redness = i * (255 / 20);
+            document.body.style.backgroundColor = "rgb(" + redness + ", 255, 255)";
             if (i <= 0) {
                 countobj.innerHTML = "<b><font size='+5'>Meowwwww!</b>";
             }
