@@ -4,10 +4,16 @@
 
     <h2>Count Down: <span id="count">20</span></h2>
     <button onclick="updateCount()">Next</button>
-
+    <button onclick="updateCountBack()">Back</button>
     <script>
         var i = 20;
 
+        function updateCountBack() {
+            i = i+1;
+            countobj = document.getElementById("count");
+            console.log("Updating object: " + countobj);
+            countobj.innerHTML = "<b>" + i + "</b>";
+            }
         function updateCount() {
             i = i - 1;
             countobj = document.getElementById("count");
