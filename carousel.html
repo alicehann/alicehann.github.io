@@ -17,11 +17,11 @@
       '/image5--angry cat'
     ];
     
-    var i = 0;
+    var index = 0;
     function Photo () {
-      i = (i + 1) % images.length;
+      index = (index + 1) % images.length;
       var carouselImage = document.getElementById("carouselImage");
-      carouselImage.src = images [i];
+      carouselImage.src = images [index];
     }
     
   </script>
