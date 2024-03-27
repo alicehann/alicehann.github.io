@@ -1,38 +1,44 @@
-<html>
+<html lang="en">
 <head>
-  <title>Angry Cats Photo Carousel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Carousel</title>
 </head>
 <body>
-  <h1>Angry Cats Photo Carousel</h1>
-  <button onclick="showNextImage()">Next</button>
-  <script>
-    <img id="cimage" height="600" src="" alt="Image Changes">
-  var images = [
-"https://www.cs.virginia.edu/~evans/pictures/2010_09_03-rice-
-hall/IMG_0590.jpg",
-"https://www.cs.virginia.edu/~evans/pictures/2010_09_03-rice-
-hall/IMG_0602.jpg",
-"https://www.cs.virginia.edu/~evans/pictures/2010-08-23-
-Shenandoah/IMG_6558.JPG",
-"https://www.cs.virginia.edu/~evans/pictures/za2010/0613-
-0616_kruger/P1010248.JPG"
-"https://www.cs.virginia.edu/~evans/pictures/2009_04_24-seattle/gasworks-
-IMG 3520.JPG"
-"https://www.cs.virginia.edu/~evans/pictures/death-valley/death-valley-salt-
-flats.JPG"
-]:
-  var currentImageIndex = 0;
-  function showImage (index) {
-   var carouselImage = document. getElementById("cimage");
-   carouselImage.src = images [index];
-  }
-  function showNextImage () {
-   currentImageIndex = (currentImageIndex + 1) % images. length;
-   showImage (currentImageIndex);
-  }
-    
-  showImage (currentImageIndex);
-  </script>
 
-</body>  
+<img id="cimage" height="600" src="" alt="Image Carousel">
+
+<button id="next">Next</button>
+
+<script>
+var images = [
+  'https://www.cs.virginia.edu/~evans/pictures/2010_09_03-rice-
+hall/IMG_0590.jpg',
+  'https://www.cs.virginia.edu/~evans/pictures/2010_09_03-rice-
+hall/IMG_0602.jpg',
+  'https://www.cs.virginia.edu/~evans/pictures/2010-08-23-
+Shenandoah/IMG_6558.JPG',
+];
+
+var currentIndex = 0;
+
+function setImageSource(index) {
+  var carouselImage = document.getElementById("cimage");
+  carouselImage.src = images[index];
+}
+
+setImageSource(currentIndex);
+
+document.getElementById("next").addEventListener("click", function() {
+  currentIndex++;
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+
+  setImageSource(currentIndex);
+});
+
+</script>
+
+</body>
 </html>
