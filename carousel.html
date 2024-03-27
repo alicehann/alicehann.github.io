@@ -19,7 +19,7 @@
     ];
     
     var index = 0;
-    var intervalId = null;
+    var Index = null;
     function NextPhoto () {
       index = (index + 1) % images.length;
       var carouselImage = document.getElementById("carouselImage");
@@ -27,11 +27,11 @@
     }
   
     function Cycle() {
-      if (intervalId === null) {
-        intervalId = setInterval(NextPhoto, 2000); 
+      if (Index === null) {
+        Index = setInterval(NextPhoto, 1000); 
       } else {
-        clearInterval(intervalId);
-        intervalId = null;
+        clearInterval(Index);
+        Index = null;
       }
     }
   </script>
