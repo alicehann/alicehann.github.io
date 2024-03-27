@@ -6,5 +6,24 @@
   <h1>Angry Cats Photo Carousel</h1>
   <button onclick="NextPhoto()">Next</button>
   
+  <img id="carouselImage" height="600" src="/image1--angry cat" alt="Image Changes">
+  <script>
+      
+    var images = [
+      '/image1--angry cat',
+      '/image2--angry cat',
+      '/image3--angry cat',
+      '/image4--angry cat',
+      '/image5--angry cat'
+    ];
+    
+    var index = 0;
+    function NextPhoto () {
+      index = (index + 1) % images.length;
+      var carouselImage = document.getElementById("carouselImage");
+      carouselImage.src = images [index];
+    }
+    
+  </script>
 </body>  
 </html>
