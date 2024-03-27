@@ -6,6 +6,7 @@
   <h1>Angry Cats Photo Carousel</h1>
   <button onclick="showNextImage()">Next</button>
   <script>
+    <img id="cimage" height="600" src="" alt="Image Changes">
   var images = [
 "https://www.cs.virginia.edu/~evans/pictures/2010_09_03-rice-
 hall/IMG_0590.jpg",
@@ -22,7 +23,7 @@ flats.JPG"
 ]:
   var currentImageIndex = 0;
   function showImage (index) {
-   var carouselImage = document. getElementById("carousel-image");
+   var carouselImage = document. getElementById("cimage");
    carouselImage.src = images [index];
   }
   function showNextImage () {
