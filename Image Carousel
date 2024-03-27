@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>Angry Cats Photo Carousel</title>
+</head>
+<body>
+  <h1>Angry Cats Photo Carousel</h1>
+  <button onclick="NextPhoto()">Next</button>
+  <script>
+  var images = [
+  'image1--angry cat',
+  'image2--angry cat',
+  'image3--angry cat',
+  'image4--angry cat',
+  'image5--angry cat'
+  ];
+
+  var i = 0;
+  function Photo (index) {
+  var i = document.getElementById("count");
+  carouselImage.src = images [index];
+ 
+  </script>
+
+</body>  
+</html>
