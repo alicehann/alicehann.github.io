@@ -5,21 +5,23 @@
 <body>
   <h1>Angry Cats Photo Carousel</h1>
   <button onclick="NextPhoto()">Next</button>
+  
   <script>
+    <img id="carouselImage" height="600" src="/image1--angry cat" alt="Image Changes">
   var images = [
-  'image1--angry cat',
-  'image2--angry cat',
-  'image3--angry cat',
-  'image4--angry cat',
-  'image5--angry cat'
+  '/image1--angry cat',
+  '/image2--angry cat',
+  '/image3--angry cat',
+  '/image4--angry cat',
+  '/image5--angry cat'
   ];
-  <img id="cimage" height="600" src="" alt="Image Changes">
+    
   var i = 0;
-  function Photo (index) {
-  var i = document.getElementById("cimage");
-  carouselImage.src = images [index];
+  function Photo () {
+  var carouselImage = document.getElementById("carouselImage");
+  carouselImage.src = images [i];
 
-  function NextPhoto (index) {
+  function NextPhoto () {
   i = (i + 1) % images.length;
   showImage (i);
   }
