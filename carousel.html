@@ -5,6 +5,7 @@
 <body>
   <h1>Angry Cats Photo Carousel</h1>
   <button onclick="NextPhoto()">Next</button>
+  <button onclick="Cycle()">Cycle</button>
   
   <img id="carouselImage" height="600" src="/image1--angry cat" alt="Image Changes">
   <script>
@@ -23,7 +24,16 @@
       var carouselImage = document.getElementById("carouselImage");
       carouselImage.src = images [index];
     }
-    
+    var index2 = null
+    function Cycle() {
+      if (index == null) {
+        index2 = setInterval(NextPhoto, 2000); 
+      } 
+      else {  
+        clearInterval(index2);
+        intervalId = null;
+      }
+    }
   </script>
 </body>  
 </html>
