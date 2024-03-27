@@ -19,18 +19,18 @@
     ];
     
     var index = 0;
+    var intervalId = null;
     function NextPhoto () {
       index = (index + 1) % images.length;
       var carouselImage = document.getElementById("carouselImage");
       carouselImage.src = images [index];
     }
-    var index2 = null
+  
     function Cycle() {
-      if (index === null) {
-        index2 = setInterval(NextPhoto, 2000); 
-      } 
-      else {  
-        clearInterval(index2);
+      if (intervalId === null) {
+        intervalId = setInterval(NextPhoto, 2000); 
+      } else {
+        clearInterval(intervalId);
         intervalId = null;
       }
     }
