@@ -18,7 +18,12 @@
   function Photo (index) {
   var i = document.getElementById("count");
   carouselImage.src = images [index];
- 
+
+  function NextPhoto (index) {
+  i = (i + 1) % images.length;
+  showImage (i);
+  }
+  showImage (i);
   </script>
 
 </body>  
